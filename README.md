@@ -123,3 +123,16 @@ De vijf EUR-tentamenregels in stap 2 zijn bijgewerkt (Nederlands en Engels), geb
 ## Wijziging v0.2.17
 - Erasmus MC toont nu dezelfde vier examenregels als Erasmus Universiteit Rotterdam, in het Nederlands en Engels.
 - Examenlinks en overige functionaliteit zijn ongewijzigd.
+
+## Wijziging v0.2.18
+- In stap 2 is voor EUR en Erasmus MC de knop **Volledige tentamenregels bekijken** toegevoegd.
+- De knop opent een documentweergave binnen de launcher met de officiële PDF *Tentamenregels EUR 2026–2027* (10 pagina's).
+- De knop **Terug naar examenregels** sluit de documentweergave zonder de gekozen instelling of het vinkje te verliezen.
+- De PDF is lokaal meegeleverd; upload het PDF-bestand samen met de overige bestanden naar GitHub Pages.
+- Als de PDF-viewer in ChromeOS-kioskmodus niet werkt, is er een rechtstreekse PDF-link als alternatief. Test beide opties op de beheerde Chromebook.
+- De originele PDF is Nederlandstalig; alleen de knoppen en begeleidende tekst zijn vertaald.
+
+
+### v0.2.19
+- De PDF met volledige tentamenregels staat nu in `assets/de_tentamenregels-eur-2026-2027.pdf`.
+- De ingesloten PDF-viewer en de rechtstreekse PDF-link verwijzen naar deze locatie.

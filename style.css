@@ -14,3 +14,13 @@ header .small{padding:10px 14px;font-size:13px}dialog{border:1px solid #54897e;b
 
 /* Footer version */
 .footer-right{display:flex;align-items:center;gap:16px}.app-version{color:#8fb8ac;font-size:12px;white-space:nowrap}
+
+/* Volledige tentamenregels: eigen documentweergave binnen de launcher */
+.full-rules-button{display:block;margin:-4px auto 24px;font-size:15px}
+.full-rules-view[hidden]{display:none!important}
+.full-rules-view{position:fixed;inset:0;z-index:50;background:#002328;display:flex;flex-direction:column;gap:14px;padding:20px max(20px,calc((100vw - 1100px)/2));color:#eaf5f1}
+.full-rules-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.full-rules-header h2{font-size:clamp(18px,2.5vw,25px);margin:0}
+.full-rules-pdf{width:100%;flex:1;min-height:0;background:white;border:1px solid #35635c;border-radius:10px}
+#pdf-direct-link{color:#a3e7d3;align-self:flex-start;font-size:14px}
+@media(max-width:650px){.full-rules-header{flex-direction:column;align-items:stretch}.full-rules-view{padding:12px}}
