@@ -116,6 +116,10 @@ Onder `institutions` staan per instelling het logo, de Nederlandse en Engelse re
 De vijf EUR-tentamenregels in stap 2 zijn bijgewerkt (Nederlands en Engels), gebaseerd op *Tentamenregels EUR 2026–2027*, artikelen 1.13, 1.14, 2.10, 2.12, 2.19 en 2.22. De regels van Erasmus MC zijn niet gewijzigd.
 
 
-## Wijziging v0.2.15
-- Versienummer `v0.2.15` rechts onderin de footer toegevoegd, naast de klok.
-- Gebaseerd op v0.2.14; geen wijzigingen uit de eerdere alternatieve v0.2.15-layout overgenomen.
+## Wijziging v0.2.16
+- Versienummer `v0.2.16` rechts onderin de footer toegevoegd, naast de klok.
+- Gebaseerd op v0.2.14; geen wijzigingen uit de eerdere alternatieve v0.2.16-layout overgenomen.
+
+## Wijziging v0.2.17
+- Erasmus MC toont nu dezelfde vier examenregels als Erasmus Universiteit Rotterdam, in het Nederlands en Engels.
+- Examenlinks en overige functionaliteit zijn ongewijzigd.

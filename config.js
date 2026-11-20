@@ -12,8 +12,18 @@ window.EXAM_CONFIG = {
       id: 'eur', name: 'Erasmus Universiteit Rotterdam', short: 'EUR',
       logo: 'assets/eur-logo.png', color: '#0c8066',
       rules: {
-        nl: ['Mobiele telefoons moeten uitgeschakeld en opgeborgen zijn. Smartwatches, draadloze oordopjes en andere niet-toegestane elektronische apparaten zijn verboden.', 'Communicatie met andere studenten is verboden. Alleen communicatie met surveillanten, medewerkers van de tentamenorganisatie en de examinator is toegestaan.', 'Volg altijd de aanwijzingen van de surveillanten.', 'Toiletbezoek is niet toegestaan tijdens het eerste uur en het laatste halfuur, behalve bij vooraf goedgekeurde bijzondere omstandigheden. Per tentamen is maximaal één toiletbezoek toegestaan.', 'Tijdens de laatste 15 minuten mag je niet opstaan of de tentamenzaal verlaten.'],
-        en: ['Mobile phones must be switched off and stored away. Smartwatches, wireless earbuds and other unauthorized electronic devices are prohibited.', 'Communication with other students is prohibited. You may communicate only with invigilators, examination staff and the examiner.', 'Always follow the invigilators’ instructions.', 'Toilet visits are not permitted during the first hour or the last half-hour, except under previously approved special circumstances. A maximum of one toilet visit is permitted per examination.', 'You must not stand up or leave the examination room during the final 15 minutes.']
+        nl: [
+          'Volg de instructies van de surveillant.',
+          'Gebruik uitsluitend de toegestane examenomgeving.',
+          'Communicatie met andere studenten is niet toegestaan.',
+          'Meld technische problemen direct bij de surveillant.'
+        ],
+        en: [
+          'Follow the invigilator’s instructions.',
+          'Use only the permitted examination environment.',
+          'Communication with other students is not permitted.',
+          'Report technical problems immediately to the invigilator.'
+        ]
       },
       exams: [
         { id: 'ans', name: 'ANS Student', url: 'https://ans.app', logoText: 'ANS' },
@@ -24,8 +34,18 @@ window.EXAM_CONFIG = {
       id: 'mc', name: 'Erasmus MC', short: 'Erasmus MC',
       logo: 'assets/erasmus-mc-logo.png', color: '#005ca9',
       rules: {
-        nl: ['Volg de aanwijzingen van de examinator of surveillant.', 'Open uitsluitend de toegewezen toetsomgeving.', 'Gebruik geen niet-toegestane hulpmiddelen.', 'Meld storingen direct bij de verantwoordelijke medewerker.'],
-        en: ['Follow the examiner’s or invigilator’s instructions.', 'Open only the assigned examination environment.', 'Do not use unauthorized aids.', 'Report technical issues immediately to the responsible staff member.']
+        nl: [
+          'Volg de instructies van de surveillant.',
+          'Gebruik uitsluitend de toegestane examenomgeving.',
+          'Communicatie met andere studenten is niet toegestaan.',
+          'Meld technische problemen direct bij de surveillant.'
+        ],
+        en: [
+          'Follow the invigilator’s instructions.',
+          'Use only the permitted examination environment.',
+          'Communication with other students is not permitted.',
+          'Report technical problems immediately to the invigilator.'
+        ]
       },
       exams: [
         { id: 'testvision', name: 'TestVision', url: 'https://erasmusmc.testvision.nl/online/kandidaten/', logoText: 'TestVision' },
