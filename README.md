@@ -114,3 +114,8 @@ Onder `institutions` staan per instelling het logo, de Nederlandse en Engelse re
 ## Wijziging v0.2.14
 
 De vijf EUR-tentamenregels in stap 2 zijn bijgewerkt (Nederlands en Engels), gebaseerd op *Tentamenregels EUR 2026–2027*, artikelen 1.13, 1.14, 2.10, 2.12, 2.19 en 2.22. De regels van Erasmus MC zijn niet gewijzigd.
+
+
+## Wijziging v0.2.15
+- Versienummer `v0.2.15` rechts onderin de footer toegevoegd, naast de klok.
+- Gebaseerd op v0.2.14; geen wijzigingen uit de eerdere alternatieve v0.2.15-layout overgenomen.

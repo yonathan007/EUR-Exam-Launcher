@@ -11,3 +11,6 @@ header .small{padding:10px 14px;font-size:13px}dialog{border:1px solid #54897e;b
 
 /* Language selector */
 .header-actions{display:flex;align-items:center;gap:14px}.language-switch{display:flex;gap:4px;background:#ffffff16;border:1px solid #ffffff28;border-radius:10px;padding:4px}.lang-btn{font:inherit;font-size:14px;color:#eaf5f1;background:transparent;border:1px solid transparent;border-radius:7px;padding:9px 11px;cursor:pointer}.lang-btn[aria-pressed="true"]{background:#0c8066;border-color:#48bba0;font-weight:700}.lang-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:650px){header{align-items:flex-start}.header-actions{gap:5px;flex-wrap:wrap;justify-content:flex-end}.lang-btn{padding:7px;font-size:12px}}
+
+/* Footer version */
+.footer-right{display:flex;align-items:center;gap:16px}.app-version{color:#8fb8ac;font-size:12px;white-space:nowrap}
