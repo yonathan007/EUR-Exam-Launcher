@@ -133,6 +133,9 @@ De vijf EUR-tentamenregels in stap 2 zijn bijgewerkt (Nederlands en Engels), geb
 - De originele PDF is Nederlandstalig; alleen de knoppen en begeleidende tekst zijn vertaald.
 
 
+### v0.2.21
+- Informatietekst op stap 3 vervangen door een korte instructie om na afloop de surveillant te informeren (NL/EN).
+
 ### v0.2.20
 - NOA – VU .NET-link gewijzigd naar HTTPS.
 
