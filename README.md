@@ -1,44 +1,111 @@
-Exam Launcher v0.2.9 — reparatie leeg startscherm (verwijderd ongeldige vertaalreferentie tijdens initialisatie).
+# EUR Exam Launcher
 
-# EUR Exam Launcher v0.2.7 — functionaliteitsuitbreiding op basis van v0.2.4
+**Versie:** 0.2.13  
+**Onderdeel:** Chromebook Exam Launcher (webvariant)  
+**Footer:** MDT-DWO · Yonathan Gelaw
 
-## Testen
-Pak de ZIP volledig uit en open `index.html` in Chrome/Edge. Voor ChromeOS kiosk blijft een HTTPS-host zoals GitHub Pages nodig bij deze webvariant.
+Een eenvoudige, tweetalige launcher waarmee studenten op een Chromebook de juiste examenomgeving kunnen kiezen. De launcher bevat geen examenvragen of antwoorden en is **geen vervanging voor ChromeOS-examenbeveiliging**.
 
-## Configuratie
-Pas uitsluitend `config.js` aan:
-- `settings.inactivitySeconds`: seconden zonder activiteit waarna de launcher naar pagina 1 terugkeert. Zet op `0` om uit te schakelen.
-- `settings.warningSeconds`: aantal seconden vooraf voor de waarschuwing.
-- `settings.confirmBeforeExam`: bevestiging voordat een examen-URL wordt geopend.
-- `institutions`: instellingsnamen, logo's, examenregels en examenlinks.
-- Een examen met een lege of ongeldige URL wordt uitgeschakeld.
+## 1. Werking
 
-## Sessiegedrag en beperkingen
-De knop **Examen openen** navigeert in hetzelfde venster naar de externe examenomgeving. De launcher heeft vanaf dat moment **geen controle** meer over de pagina: hij kan geen actief examen beëindigen, geen timeout afdwingen en niet gegarandeerd automatisch terugkeren. De surveillant moet de examenomgeving afsluiten of de kiosk opnieuw starten volgens het ChromeOS-beleid. Terug via browsergeschiedenis werkt alleen als de externe site en het kioskbeleid dit toelaten. De inactiviteitsteller werkt **uitsluitend zolang de launcher zichtbaar is**.
+De launcher bestaat uit drie stappen:
 
-De knop Startscherm en de knop Regels werken op de launcherpagina's. Er is een bevestigingsvenster voor de externe navigatie. NOA gebruikt nog HTTP en toont daarom een extra waarschuwing. Exam server is ingeschakeld met de aangeleverde Azure Virtual Desktop URL. Controleer op de Chromebook of authenticatie, sessiestart en navigatie in kioskmodus werken.
+1. **Onderwijsinstelling kiezen:** Erasmus Universiteit Rotterdam (EUR) of Erasmus MC.
+2. **Examenregels lezen:** de regels van de gekozen instelling worden getoond. De student moet deze accepteren om verder te gaan.
+3. **Examenomgeving kiezen:** de beschikbare omgevingen verschijnen als tegels. Voor het openen volgt een bevestigingsvenster met de titel **Examenomgeving starten?** (Engels: **Launch exam environment?**).
 
-## Veiligheid
-De regels en bevestiging zijn gebruikersinterface, geen examenbeveiliging. Beperk navigatie, sneltoetsen en sessiegedrag via ChromeOS-beleid en de examenomgeving. GitHub Pages publiceert alle statische bestanden; geen geheimen opnemen. Test eerst in een aparte test-OU.
+De taalkeuze **NL / EN** staat rechtsboven. De knop **Startscherm** staat bij stap 3 onderaan; er is geen Startscherm-knop in de kopbalk. De footer toont **MDT-DWO · Yonathan Gelaw**.
 
+## 2. Beschikbare examenomgevingen
 
-## v0.2.8 — Nederlands / English
-- Klik rechtsboven op 🇳🇱 NL of 🇬🇧 EN om direct te wisselen, zonder herladen.
-- De keuze geldt gedurende de huidige launchersessie en wordt niet opgeslagen op de Chromebook.
-- De standaardtaal is `settings.defaultLanguage` in `config.js` (`nl` of `en`).
-- Examenregels zijn per instelling configureerbaar via `rules.nl` en `rules.en`.
-- Knoppen, waarschuwingen, dialogen en kloktaal zijn vertaald.
-- Namen van examenomgevingen en URL's blijven gelijk in beide talen.
-- Externe websites (ANS, TestVision, AVD) worden niet door de launcher vertaald.
-- Bestaande beperkingen van kioskmodus en externe navigatie blijven gelden.
+| Instelling | Omgeving | URL |
+| --- | --- | --- |
+| EUR | ANS Student | https://ans.app |
+| EUR | Exam server (Azure Virtual Desktop, proof of concept) | Zie `config.js` voor de volledige URL |
+| Erasmus MC | TestVision | https://erasmusmc.testvision.nl/online/kandidaten/ |
+| Erasmus MC | TestVision iVTG | https://ivtg.testvision.nl/online/kandidaten/ |
+| Erasmus MC | NOA – VU .NET | http://noa-online.net/eurgk |
 
-## v0.2.10
-De Startscherm/Home-knop in de kopbalk is verborgen bij stap 2 (examenregels). De knop Terug blijft beschikbaar. Bij stap 3 blijft Startscherm beschikbaar.
+**Let op:** de NOA-link gebruikt HTTP in plaats van HTTPS. De launcher toont hiervoor een aanvullende waarschuwing. Controleer de URLs en de bereikbaarheid van alle omgevingen vóór gebruik.
 
-## v0.2.11
-- De Home/Startscherm-knop rechtsboven is verwijderd, ook op stap 3.
-- De Home/Startscherm-knop onderaan stap 3 blijft beschikbaar.
+## 3. Bestandsstructuur
 
-## v0.2.12
-- Bevestigingsvenster: titel gewijzigd in 'Examenomgeving starten?' (EN: 'Launch exam environment?').
-- Informatietekst onder het bevestigingsbericht verwijderd in beide talen.
+```text
+Exam-Launcher-v0.2.13/
+├── index.html             # Paginastructuur en bevestigingsvenster
+├── style.css              # Vormgeving
+├── app.js                 # Navigatie, taal, timer en openen van examens
+├── config.js              # Instellingen, instellingen/regels en examenlinks
+├── assets/
+│   ├── eur-logo.png
+│   └── erasmus-mc-logo.png
+└── README.md              # Deze documentatie
+```
+
+De **EUR Exam Companion-extensie** is een apart project en maakt geen deel uit van deze launcher.
+
+## 4. Lokaal testen
+
+1. Pak het ZIP-bestand volledig uit.
+2. Open `index.html` in Chrome of Edge.
+3. Doorloop beide instellingen, controleer de examenregels en test de NL/EN-knoppen.
+4. Controleer de bevestiging vóór het openen van een examenomgeving.
+
+Een geslaagde lokale test betekent **niet** dat externe examenomgevingen ook binnen ChromeOS-kioskmodus werken.
+
+## 5. Publiceren via GitHub Pages
+
+1. Plaats de inhoud van de projectmap in de repository, zodat `index.html`, `app.js`, `config.js`, `style.css` en `assets/` op hetzelfde niveau staan.
+2. Configureer GitHub Pages voor de juiste branch en map (meestal `main` / `/ (root)`).
+3. Open de gepubliceerde HTTPS-URL en test opnieuw.
+4. Als het startscherm leeg is: controleer in de browserontwikkelaarstools onder **Console** en **Network** of `config.js` en `app.js` zonder fouten worden geladen. Test eventueel met uitgeschakelde browsercache.
+
+Voor deze webvariant kan bijvoorbeeld de bestaande GitHub Pages-locatie worden gebruikt: https://yonathan007.github.io/EUR-Exam-Launcher/
+
+## 6. Configuratie aanpassen
+
+Pas normale instellingen en examenlinks aan in **`config.js`**.
+
+| Instelling | Standaard | Betekenis |
+| --- | --- | --- |
+| `settings.defaultLanguage` | `nl` | Starttaal: `nl` of `en` |
+| `settings.inactivitySeconds` | `180` | Na zoveel seconden zonder activiteit terug naar stap 1; `0` schakelt dit uit |
+| `settings.warningSeconds` | `30` | Waarschuwing vóór automatische terugkeer |
+| `settings.confirmBeforeExam` | `true` | Bevestiging vóór openen van de examenomgeving |
+| `settings.showSessionReturnHint` | `true` | Informatietekst op stap 3 over terugkeer na het openen |
+
+Onder `institutions` staan per instelling het logo, de Nederlandse en Engelse regels (`rules.nl`, `rules.en`) en de examenomgevingen (`exams`). Een examen met een ongeldige of ontbrekende HTTP(S)-URL wordt uitgeschakeld.
+
+**Opmerking:** `showSessionReturnHint` gaat over de tekst op **stap 3**, niet over het bevestigingsvenster. De eerder verwijderde aanvullende informatietekst in het bevestigingsvenster is niet opnieuw toegevoegd.
+
+## 7. Gedrag en beperkingen
+
+- De launcher opent een examenomgeving **in hetzelfde browservenster** via navigatie naar de ingestelde URL.
+- Zodra de externe website geopend is, kan de launcher die examenomgeving niet beheren of beëindigen.
+- De inactiviteitsteller werkt alleen zolang de launcherpagina actief is.
+- De taalwisselaar vertaalt de launcher, **niet** de externe examenwebsites.
+- De gekozen taal wordt niet blijvend op het apparaat opgeslagen.
+- Of externe links, authenticatie en terugnavigatie werken, hangt af van de examenomgeving en het ingestelde ChromeOS-kioskbeleid. Dit moet op de beheerde Acer Chromebooks worden getest.
+
+## 8. Veiligheid en beheer
+
+- Gebruik een **test-OU** voordat je de launcher op examenapparaten inzet.
+- Beperk ongewenste navigatie en systeemfuncties met ChromeOS-beleid en de beveiligingsinstellingen van de examenplatformen.
+- Zet **geen wachtwoorden, API-sleutels of tokens** in `config.js` of andere statische bestanden: GitHub Pages publiceert die bestanden openbaar.
+- Test na elke wijziging beide talen, beide instellingen en de relevante examenlinks.
+
+## 9. Versieoverzicht
+
+| Versie | Belangrijkste wijziging |
+| --- | --- |
+| 0.2.7 | AVD Exam server-link en uitbreiding van sessiefunctionaliteit |
+| 0.2.8 | Nederlandse en Engelse interface |
+| 0.2.9 | Reparatie van leeg startscherm door JavaScript-fout |
+| 0.2.10 | Startscherm-knop bovenaan verborgen bij stap 2 |
+| 0.2.11 | Startscherm-knop bovenaan ook verwijderd bij stap 3 |
+| 0.2.12 | Titel bevestiging gewijzigd naar *Examenomgeving starten?*; aanvullende informatietekst verwijderd |
+| **0.2.13** | Footer gewijzigd naar **MDT-DWO · Yonathan Gelaw** |
+
+---
+
+**Documentatie bijgewerkt voor v0.2.13.** Deze herziening wijzigt uitsluitend `README.md`; de launcherbestanden blijven ongewijzigd.
