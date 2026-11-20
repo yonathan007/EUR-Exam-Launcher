@@ -2,6 +2,7 @@
 
 **Versie:** 0.2.13  
 **Onderdeel:** Chromebook Exam Launcher (webvariant)  
+**Footer:** MDT-DWO · Yonathan Gelaw
 
 Een eenvoudige, tweetalige launcher waarmee studenten op een Chromebook de juiste examenomgeving kunnen kiezen. De launcher bevat geen examenvragen of antwoorden en is **geen vervanging voor ChromeOS-examenbeveiliging**.
 
@@ -30,7 +31,7 @@ De taalkeuze **NL / EN** staat rechtsboven. De knop **Startscherm** staat bij st
 ## 3. Bestandsstructuur
 
 ```text
-Exam-Launcher-v0.2.13/
+Exam-Launcher-v0.2.14/
 ├── index.html             # Paginastructuur en bevestigingsvenster
 ├── style.css              # Vormgeving
 ├── app.js                 # Navigatie, taal, timer en openen van examens
@@ -107,4 +108,9 @@ Onder `institutions` staan per instelling het logo, de Nederlandse en Engelse re
 
 ---
 
-**Documentatie bijgewerkt voor v0.2.13.** Deze herziening wijzigt uitsluitend `README.md`; de launcherbestanden blijven ongewijzigd.
+**Documentatie bijgewerkt voor v0.2.14.** Deze herziening wijzigt uitsluitend `README.md`; de launcherbestanden blijven ongewijzigd.
+
+
+## Wijziging v0.2.14
+
+De vijf EUR-tentamenregels in stap 2 zijn bijgewerkt (Nederlands en Engels), gebaseerd op *Tentamenregels EUR 2026–2027*, artikelen 1.13, 1.14, 2.10, 2.12, 2.19 en 2.22. De regels van Erasmus MC zijn niet gewijzigd.
