@@ -50,7 +50,7 @@ window.EXAM_CONFIG = {
       exams: [
         { id: 'testvision', name: 'TestVision', url: 'https://erasmusmc.testvision.nl/online/kandidaten/', logoText: 'TestVision' },
         { id: 'ivtg', name: 'TestVision iVTG', url: 'https://ivtg.testvision.nl/online/kandidaten/', logoText: 'iVTG' },
-        { id: 'noa', name: 'NOA – VU .NET', url: 'http://noa-online.net/eurgk', logoText: 'NOA', note: 'HTTP — geen versleutelde verbinding' }
+        { id: 'noa', name: 'NOA – VU .NET', url: 'https://noa-online.net/eurgk', logoText: 'NOA' }
       ]
     }
   ]

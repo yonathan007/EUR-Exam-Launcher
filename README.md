@@ -24,7 +24,7 @@ De taalkeuze **NL / EN** staat rechtsboven. De knop **Startscherm** staat bij st
 | EUR | Exam server (Azure Virtual Desktop, proof of concept) | Zie `config.js` voor de volledige URL |
 | Erasmus MC | TestVision | https://erasmusmc.testvision.nl/online/kandidaten/ |
 | Erasmus MC | TestVision iVTG | https://ivtg.testvision.nl/online/kandidaten/ |
-| Erasmus MC | NOA – VU .NET | http://noa-online.net/eurgk |
+| Erasmus MC | NOA – VU .NET | https://noa-online.net/eurgk |
 
 **Let op:** de NOA-link gebruikt HTTP in plaats van HTTPS. De launcher toont hiervoor een aanvullende waarschuwing. Controleer de URLs en de bereikbaarheid van alle omgevingen vóór gebruik.
 
@@ -132,6 +132,9 @@ De vijf EUR-tentamenregels in stap 2 zijn bijgewerkt (Nederlands en Engels), geb
 - Als de PDF-viewer in ChromeOS-kioskmodus niet werkt, is er een rechtstreekse PDF-link als alternatief. Test beide opties op de beheerde Chromebook.
 - De originele PDF is Nederlandstalig; alleen de knoppen en begeleidende tekst zijn vertaald.
 
+
+### v0.2.20
+- NOA – VU .NET-link gewijzigd naar HTTPS.
 
 ### v0.2.19
 - De PDF met volledige tentamenregels staat nu in `assets/de_tentamenregels-eur-2026-2027.pdf`.
