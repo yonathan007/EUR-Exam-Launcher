@@ -2,7 +2,6 @@
 
 **Versie:** 0.2.13  
 **Onderdeel:** Chromebook Exam Launcher (webvariant)  
-**Footer:** MDT-DWO · Yonathan Gelaw
 
 Een eenvoudige, tweetalige launcher waarmee studenten op een Chromebook de juiste examenomgeving kunnen kiezen. De launcher bevat geen examenvragen of antwoorden en is **geen vervanging voor ChromeOS-examenbeveiliging**.
 
